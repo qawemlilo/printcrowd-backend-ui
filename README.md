@@ -1,7 +1,22 @@
-# Vue 3 + Vite
+# PrintCrowd Client Admin UI
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Specs
 
-## Recommended IDE Setup
+  - JavaScript Framework - `vue` `v3.x`
+  - UI - [SB Admin 2 v4.1.3](https://startbootstrap.com/theme/sb-admin-2)
+  - Routing - `vue-router` `v4.x`
+  - State Management - `vuex` `v4.x`
+  - State Caching - `vuex-persistedstate` `v4.x`
+  - HTTP Requests - `axios` `v1.x`
+  - Animation - `animate.css` `v4.x`
+  - Testing - `vite`, `vitest`, `@vue/test-utils`
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Commands
+
+  - `npm run dev` - start development server
+  - `npm run build` - compile vue app
+  -  `npm run test` - testing
+
+
+
+  
