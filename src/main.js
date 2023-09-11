@@ -13,10 +13,26 @@ import 'vue-toastification/dist/index.css';
 
 const mainApp = createApp(App);
 
+mainApp.directive('click-away', {
+  bind(el, binding, vnode) {
+    el.clickOutsideEvent = (event) => {
+      if (!(el === event.target || el.contains(event.target))) {
+        vnode.context[binding.expression](event);
+      }
+    };
+    document.body.addEventListener("click", el.clickOutsideEvent);
+  },
+
+  unbind(el) {
+    document.body.removeEventListener("click", el.clickOutsideEvent);
+  },
+});
+
 const token = store.state.auth.token;
 if (token) {
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 }
+
 
 const ToastOptions = {
   transition: "Vue-Toastification__fade",

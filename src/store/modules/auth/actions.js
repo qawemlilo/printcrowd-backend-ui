@@ -5,7 +5,7 @@ export default {
   async getUser ({ commit }) {
     let user = await auth.getUser();
 
-    commit('SET_USER', {user});
+    commit('SET_USER', { user });
   },
 
 

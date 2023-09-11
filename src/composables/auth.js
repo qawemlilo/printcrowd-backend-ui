@@ -11,7 +11,7 @@ export function useAuth() {
 
   const user = computed(() => {
     return store.getters['auth/user'];
-  });     
+  });
   const token = computed(() => {
     return store.getters['auth/token'];
   });
@@ -22,7 +22,7 @@ export function useAuth() {
     try {
       await store.dispatch('auth/login', data);
       router.push('/dashboard');
-    } 
+    }
     catch (e) {
       error.value = e.message;
       handleError(e);
@@ -31,10 +31,17 @@ export function useAuth() {
 
   const logout = async (e) => {
     e.preventDefault();
-    
+
     await store.dispatch('auth/logout');
-  
+
     router.push('/login');
+  }
+
+
+  const getUser = async (e) => {
+    e.preventDefault();
+
+    await store.dispatch('auth/getUser');
   }
 
   onMounted(() => {
